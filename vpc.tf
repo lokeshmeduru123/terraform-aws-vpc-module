@@ -89,6 +89,7 @@ resource "aws_db_subnet_group" "default" {
   )
 }
 
+#Elastic IP 
 resource "aws_eip" "nat" {
   domain   = "vpc"
 }
