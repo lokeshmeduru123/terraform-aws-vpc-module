@@ -1,3 +1,4 @@
+# VPC 
 resource "aws_vpc" "main" {
   cidr_block       = var.vpc_cidr
   instance_tenancy = "default"
@@ -12,6 +13,7 @@ resource "aws_vpc" "main" {
   )
 }
 
+# internet gateway
 resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.main.id
 
