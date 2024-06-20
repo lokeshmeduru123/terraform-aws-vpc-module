@@ -53,7 +53,7 @@ variable "public_subnet_cidr_tags" {
 variable "private_subnet_cidrs" {
     type = list
     validation {
-        condition = length(var.private_subnet_cidrs) == 2
+        condition = length(var.private_subnet_cidrs) == 2 #because one for us-eat-1a and otehr for us-east-1b
         error_message = "Please provide 2 valid private subnet CIDR"
     }
 }
@@ -68,7 +68,7 @@ variable "private_subnet_cidr_tags" {
 variable "database_subnet_cidrs" {
     type = list
     validation {
-        condition = length(var.database_subnet_cidrs) == 2
+        condition = length(var.database_subnet_cidrs) == 2 #because one for us-eat-1a and otehr for us-east-1b
         error_message = "Please provide 2 valid database subnet CIDR"
     }
 }
